@@ -12,15 +12,17 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="thumbnails/vdlogo.jpeg" class="logo">
-                <ul>
+                <img src="thumbnails/logoss.png" class="logo">
+                <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
-                    <li><a href="#about">about</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skill</a></li>
-                    <li><a href="#portfolio">portfolio</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
-            </nav>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>           
             <div class="header-text">
                 <p> Student | Programmer | Developer </p>
                     <h1>Hi,I'm <span>Vidhya Thakre</span><br>From India</h1>
@@ -41,17 +43,32 @@
                     <p>Born and brought up in the city of Lakes Bhopal, Currently pursuing B.Tech in Chemical Engineering from MANIT, BHOPAL.</p>
                     
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+
                     </div>
-                    <div class="tab-contents">
+
+                    <div class="tab-contents active-tab" id="education">
                         <ul>
-                            <li><span>Btech </span><br>Chemical Engineering <br>MANIT Bhopal,2021-2025</li>
+                            <li><span>BTech </span><br>Chemical Engineering <br>MANIT Bhopal, 2021-2025</li>
                             
-                            <li><span>12th CBSE</span><br>Vikram Higher secondary school piplani <br>bhel Bhopal,2021 </li>
+                            <li><span>12th CBSE</span><br>Vikram Higher Secondary School Piplani <br>BHEL Bhopal, 2021 </li>
                             
-                            <li><span>10th CBSE</span><br>Vikram Higher secondary school piplani <br>bhel Bhopal,2019</li>
+                            <li><span>10th CBSE</span><br>Vikram Higher Secondary School Piplani <br>BHEL Bhopal, 2019</li>
                         </ul>
                     </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Vocational Training </span><br>Bharat Heavy Electricals Limited (BHEL)<br>Bhopal, Madhya Pradesh. <br>16 May’23 - 30 May’23 </li>
+                            
+                            <li><span>Summer Internship (2M)</span><br>Bureau of Indian Standards (BIS MUBO-I) <br>Mumbai, Maharashtra. <br> 18 Jun’24 - 12 Aug’24</li>
+                            
+                        </ul>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -66,23 +83,38 @@
             <div>
                 <i class="fas fa-code"></i>
                 <h2>Data Structure And Algorithm</h2>
-                <p>learning DSA</p>
+                <p>Solved around 500+ DSA questions on various platforms</p>
             </div>
+
+            <div>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h2>Tools</h2>
+                <p>Microsoft Excel, MATLAB, Visual Studio Code, GIT/GitHub, MySQL, DWSIM</p>
+            </div>
+
+            <!-- <div>
+                <i class="fas fa-code"></i>
+                <h2>Soft Skills</h2>
+                <p>Teamwork, Adaptability, Hard Working</p>
+            </div> -->
 
             <div>
                 <i class="fa-solid fa-bug"></i>
                 <h2>Competitive Programming</h2>
-                <p>love to solve conding ques</p>
+                <p>Love to solve Coding Questions</p>
             </div>
 
             <div>
                 <i class="fa-solid fa-earth-americas"></i>
                 <h2>Web Development</h2>
-                <p>designing Web pages using html css</p>
+                <p>Designed "My Portfolio", "Youtube Clone", and "Expense Tracker" using HTML and CSS</p>
             </div>
         </div>
     </div>
 </div>
+
+
+
 
 <!-- ............portfolio........... -->
 
@@ -94,6 +126,7 @@
                 <img src="thumbnails/codec2.webp">
                 <div class="layer">
                     <h3>CodeChef</h3>
+                    <p>2 Star <br>(Max. Rating 1532)</p>
                     <a href="https://www.codechef.com/users/vidhya_thakre" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
@@ -101,6 +134,7 @@
                 <img src="thumbnails/codeforces_logo.png">
                 <div class="layer">
                     <h3>CodeForces</h3>
+                    <p>(Max. Rating 1091)</p>
                     <a href="https://codeforces.com/profile/vdhthakre" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
@@ -108,6 +142,7 @@
                 <img src="thumbnails/leetc2.png">
                 <div class="layer">
                     <h3>Leetcode</h3>
+                    <p>Solved around 500+ DSA questions</p>
                     <a href="https://leetcode.com/vdhthakre/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
@@ -137,11 +172,13 @@
                 <h1 class="sub-title">Contact Me</h1>
                 <p><i class="fa-solid fa-envelope"></i> vdhthakre@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i> 6266643169</p>
+
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/vidhya-thakre-01080222a" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://instagram.com/thakre_vidhya?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
-                <a href="VdResumePortfolio.pdf" target="_blank" download class="btn">Download CV</a>
+
+                <a href="Vidhya Thakre Resume New2.pdf" target="_blank" download class="btn">Download CV</a>
 
             </div>
             <div class="contact-right">
@@ -160,8 +197,34 @@
     </div>
 </div>
 
+<!------------- script --------------------->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 
 
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
 
 </body>
 </html>
